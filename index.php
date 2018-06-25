@@ -1,19 +1,19 @@
 <?php
-class webpage{
-    public function loadCustomMenuContent()
-    {
-    }
+    class webpage{
+        public function loadCustomMenuContent()
+        {
+        }
 
-    public function loadHTMLContent()
-    {
-    }
+        public function loadHTMLContent()
+        {
+        }
 
-    public function loadCSSContent()
-    {
-    }
+        public function loadCSSContent()
+        {
+        }
 
-    public function loadContent()
-    {
+        public function loadContent()
+        {
+        }
     }
-}
 ?>
