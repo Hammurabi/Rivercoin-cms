@@ -23,6 +23,7 @@
             }
         }
     }
+
     class webpage{
         public function loadCustomMenuContent()
         {
@@ -40,4 +41,6 @@
         {
         }
     }
+
+    include_once 'plugin_loader.php';
 ?>
