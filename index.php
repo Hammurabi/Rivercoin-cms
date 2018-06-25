@@ -25,6 +25,13 @@
     }
 
     class webpage{
+        private $data;
+
+        public function webpage($name)
+        {
+            $data = $json_decode(file_get_contents("raw/page-content/" . $name));
+        }
+
         public function loadCustomMenuContent()
         {
         }
