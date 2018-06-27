@@ -26,28 +26,24 @@
 
     class webpage{
         private $data;
+        private $custom_menu;
 
-        public function webpage($name)
+        public function __construct($name)
         {
-            $data = $json_decode(file_get_contents("raw/page-content/" . $name));
-        }
-
-        public function loadCustomMenuContent()
-        {
-        }
-
-        public function loadHTMLContent()
-        {
-        }
-
-        public function loadCSSContent()
-        {
+            $this->$data = file_get_contents("raw/page-content/" . $name . '.html');
         }
 
         public function loadContent()
         {
+            $pattern = "/<section class='content'>(.*?)<\/section>/";
+            preg_match_all($pattern, $string, $matches);
+            
+            echo($matches[0]);
         }
     }
 
     include_once 'plugin_loader.php';
+
+    $pagenme = 'index';
+    $display = new webpage($pagenme);
 ?>
